@@ -1,5 +1,5 @@
 let flag = 0, xWinFlag = 0, oWinFlag = 0;
-let p, xCache = 0, oCache = 0;
+let p, xCache = -1, oCache = 0;
 let xo = null;
 let q = [1,2,3];
 
@@ -32,8 +32,30 @@ function checkWin()
         {
             for(let j = 0; j < winning[i].length; j++)
             {
-                xCache = winning[i][j].findIndex(trackerX[j])
+                xCache = winning[i].indexOf(trackerX[0]);
                 
+
+                if(xCache == 0)
+                {
+                    console.log(i + "\n\n");
+                    for(let v = 0; v < 3; v++)
+                    {
+                        if(trackerX[v] == winning[i][v])
+                        {
+                            xWinFlag++;
+                        }
+                    }
+                    if(xWinFlag >= 3)
+                    {
+                        checkFlag();
+                    }
+                }
+                else
+                {
+                    console.log(trackerX);
+                    trackerX.shift();
+                    checkWin();
+                }
                 
                 // if(trackerX[j] == winning[i][j])
                 // {
@@ -44,16 +66,7 @@ function checkWin()
                 //     oWinFlag++;
                 // }
             }
-            if(xWinFlag < 3)
-            {
-                xWinFlag = 0;
-            }
-            if(oWinFlag < 3)
-            {
-                oWinFlag = 0;
-            }
         }
-        checkFlag();
     }
 }
 
