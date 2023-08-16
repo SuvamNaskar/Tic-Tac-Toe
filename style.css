@@ -57,8 +57,17 @@ body{
     border: 1px solid black;
 }
 
-#info h2{
-    font-size: 16px;
+#info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#win{
+    margin: 5px;
+    font-size: 25px;
+    color: lawngreen;
 }
 
 #newgame{
