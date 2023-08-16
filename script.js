@@ -14,6 +14,15 @@ let winning = [
     [3,6,9]
 ];
 
+let w1 = [1,2,3];
+let w2 = [4,5,6];
+let w3 = [7,8,9];
+let w4 = [1,5,9];
+let w5 = [3,5,7];
+let w6 = [1,4,7];
+let w7 = [2,5,8];
+let w8 = [3,6,9];
+
 let trackerX = [];
 let trackerO = [];
 
@@ -26,36 +35,79 @@ function checkWin()
     trackerO.sort(function(a, b){return a-b});
     trackerX.sort(function(a, b){return a-b});
 
-    if(trackerO.length > 2 || trackerX.length > 2)
-    {
-        for(let i = 0; i < winning.length; i++)
-        {
-            for(let j = 0; j < winning[i].length; j++)
-            {
-                xCache = winning[i].indexOf(trackerX[0]);
+    // if(trackerO.length > 2 || trackerX.length > 2)
+    // // {
+    //     for(let i = 0; i < 1; i++)
+    //     {
+            // for(let j = 0; j < 3; j++)
+            // {
+                // xCache = w1.indexOf(trackerX[0]);
                 
 
-                if(xCache == 0)
+                //-------------------------------------
+
+
+                if(! w1.indexOf(trackerX[0]))
                 {
-                    console.log(i + "\n\n");
-                    for(let v = 0; v < 3; v++)
-                    {
-                        if(trackerX[v] == winning[i][v])
-                        {
-                            xWinFlag++;
-                        }
-                    }
-                    if(xWinFlag >= 3)
-                    {
-                        checkFlag();
-                    }
+                    xCache = w1.indexOf(trackerX[0]);
                 }
-                else
+                else if(! w2.indexOf(trackerX[0]))
                 {
-                    console.log(trackerX);
-                    trackerX.shift();
-                    checkWin();
+                    xCache = w2.indexOf(trackerX[0]);
                 }
+                else if(! w3.indexOf(trackerX[0]))
+                {
+                    xCache = w3.indexOf(trackerX[0]);
+                }
+                else if(! w4.indexOf(trackerX[0]))
+                {
+                    xCache = w4.indexOf(trackerX[0]);
+                }
+                else if(! w5.indexOf(trackerX[0]))
+                {
+                    xCache = w5.indexOf(trackerX[0]);
+                }
+                else if(! w6.indexOf(trackerX[0]))
+                {
+                    xCache = w6.indexOf(trackerX[0]);
+                }
+                else if(! w7.indexOf(trackerX[0]))
+                {
+                    xCache = w7.indexOf(trackerX[0]);
+                }
+                else if(! w8.indexOf(trackerX[0]))
+                {
+                    xCache = w8.indexOf(trackerX[0]);
+                }
+                else{
+                    xCache = -1;
+                }
+                
+
+
+                //-------------------------------------
+
+
+                // if(xCache == 0)
+                // {
+                //     console.log(i + "\n\n");
+                //     for(let v = 0; v < 3; v++)
+                //     {
+                //         if(trackerX[v] == winning[i][v])
+                //         {
+                //             xWinFlag++;
+                //         }
+                //     }
+                //     if(xWinFlag >= 3)
+                //     {
+                //         checkFlag();
+                //     }
+                // }
+                // else
+                // {
+                //     console.log(trackerX);
+                //     trackerX.shift();
+                // }
                 
                 // if(trackerX[j] == winning[i][j])
                 // {
@@ -65,9 +117,9 @@ function checkWin()
                 // {
                 //     oWinFlag++;
                 // }
-            }
-        }
-    }
+            // }
+        // }
+    // }
 }
 
 function checkFlag()
