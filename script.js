@@ -82,6 +82,9 @@ function checkWin()
                 else{
                     xCache = -1;
                 }
+
+
+                console.log(xCache);
                 
 
 
