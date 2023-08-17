@@ -19,7 +19,7 @@ function checkWin()
         //player 1 wins
         document.getElementById("win").innerHTML = "Player 1 Won";
     }
-    elseif(c1 == "O" && c2 == "O" && c3 == "O"
+    else if(c1 == "O" && c2 == "O" && c3 == "O"
         || c4 == "O" && c5 == "O" && c6 == "O"
         || c7 == "O" && c8 == "O" && c9 == "O"
         || c1 == "O" && c4 == "O" && c7 == "O"
@@ -30,6 +30,11 @@ function checkWin()
     {
         //player 2 wins
         document.getElementById("win").innerHTML = "Player 2 Won";
+    }
+    else
+    {
+        //none wins
+        document.getElementById("win").innerHTML = "Match Tie";
     }
 }
 
