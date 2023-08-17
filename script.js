@@ -18,6 +18,15 @@ function checkWin()
     {
         //player 1 wins
         document.getElementById("win").innerHTML = "Player 1 Won";
+        document.getElementById("1").disabled = true;
+        document.getElementById("2").disabled = true;
+        document.getElementById("3").disabled = true;
+        document.getElementById("4").disabled = true;
+        document.getElementById("5").disabled = true;
+        document.getElementById("6").disabled = true;
+        document.getElementById("7").disabled = true;
+        document.getElementById("8").disabled = true;
+        document.getElementById("9").disabled = true;
     }
     else if(c1 == "O" && c2 == "O" && c3 == "O"
         || c4 == "O" && c5 == "O" && c6 == "O"
@@ -30,6 +39,15 @@ function checkWin()
     {
         //player 2 wins
         document.getElementById("win").innerHTML = "Player 2 Won";
+        document.getElementById("1").disabled = true;
+        document.getElementById("2").disabled = true;
+        document.getElementById("3").disabled = true;
+        document.getElementById("4").disabled = true;
+        document.getElementById("5").disabled = true;
+        document.getElementById("6").disabled = true;
+        document.getElementById("7").disabled = true;
+        document.getElementById("8").disabled = true;
+        document.getElementById("9").disabled = true;
     }
     else
     {
