@@ -33,24 +33,6 @@ function checkWin()
     }
 }
 
-function checkFlag()
-{
-    if(xWinFlag >= 3)
-    {
-        console.log("Player 1 wins");
-        document.getElementById("win").innerHTML = "Player 1 Won";
-    }
-    else if(oWinFlag >= 3)
-    {
-        console.log("Player 2 wins");
-        document.getElementById("win").innerHTML = "Player 2 Won";
-    }
-    else
-    {
-        console.log("Match Tie");
-    }
-}
-
 function mark1()
 {
     xo = getSymbol();
