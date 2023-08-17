@@ -1,5 +1,5 @@
 let flag = 0;
-let p;
+let p = 0;
 let xo = null;
 
 let c1 ,c2, c3, c4, c5, c6, c7, c8, c9;
@@ -52,7 +52,8 @@ function checkWin()
     else
     {
         //none wins
-        document.getElementById("win").innerHTML = "Match Tie";
+        if(p == 9)
+            document.getElementById("win").innerHTML = "Match Tie";
     }
 }
 
@@ -167,10 +168,12 @@ function changeFlag()
 {
     if(flag)
     {
+        p++;
         flag = 0;
     }
     else
     {
+        p++;
         flag = 1;
     }
 }
